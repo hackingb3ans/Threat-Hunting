@@ -1,0 +1,4 @@
+Sentinel One XDR
+```
+(src.process.name matches:anycase 'psexec' OR src.process.displayName matches:anycase 'psexec' OR file.path matches:anycase 'psexec' OR src.process.image.path matches:anycase 'psexec' OR src.process.cmdline matches:anycase 'psexec') AND (#cmdline matches:anycase 'rundll32' OR tgt.file.path matches:anycase 'rundll32')
+```
