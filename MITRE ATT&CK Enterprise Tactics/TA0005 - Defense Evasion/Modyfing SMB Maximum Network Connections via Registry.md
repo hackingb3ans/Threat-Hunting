@@ -1,8 +1,8 @@
 #### SentinelOne
 ```
-#cmdline matches:anycase '(?i)\\/C \"(vssadmin|vssadmin\.exe|wmic|wmic.exe)\\s+(Delete Shadows|Shadowcopy)' OR cmdScript.content matches:anycase '(?i)\\/C \"(vssadmin|vssadmin\.exe|wmic|wmic.exe)\\s+(Delete Shadows|Shadowcopy)'
+#cmdline matches:anycase '(?i)reg add HKEY_LOCAL_MACHINE\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanmanServer\\\\Parameters' OR cmdScript.content matches:anycase '(?i)reg add HKEY_LOCAL_MACHINE\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanmanServer\\\\Parameters' OR registry.value matches:anycase '(?i)reg add HKEY_LOCAL_MACHINE\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\LanmanServer\\\\Parameters'
 ```
 
 #### Techniques:
-T1490 - Inhibit System Recovery | https://attack.mitre.org/techniques/T1490/
-T1059.003 - Command and Scripting Interpreter: Windows Command Shell | https://attack.mitre.org/techniques/T1059/003/
+T1021.002 - Remote Services: SMB/Windows Admin Shares | https://attack.mitre.org/techniques/T1021/002/
+T1112 - Modify Registry | https://attack.mitre.org/techniques/T1112/
