@@ -8,7 +8,6 @@ url.address contains:anycase ('bashupload') OR (src.process.cmdline contains:any
 ```
 target.url = /bashupload/ nocase
 (principal.process.command_line = /certutil/ nocase AND principal.process.command_line = /bashupload/ nocase)
-security_result.rule_name != "LONI DNS NTP"
 ```
 
 #### Crowd Strike
